@@ -1,0 +1,45 @@
+struct kilometer {
+    a: f32;
+}
+
+struct meter {
+    a: f32;
+}
+
+struct centimeter {
+    a: f32;
+}
+
+kilometer -> meter {
+    return {
+        a: in.a / 1000
+    };
+}
+
+meter -> centimeter {
+    return {
+        a: in.a / 100
+    };
+}
+
+struct a {
+    a: i32 = 0;
+    b: str = "Hello \"World.\"";
+}
+
+a -> i32 {
+    return in.a;
+}
+
+a.increment(b: i16): a {
+    in.a += b;
+    return in;
+}
+
+main(argv: Array<Str>): void {
+    let start: kilometer = {
+        a: 1
+    };
+
+    print(`1 kilometer in centimeters: %cm%`, cm: (centimeter)start);
+}

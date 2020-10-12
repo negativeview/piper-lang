@@ -1,0 +1,2 @@
+add_library(Runtime runtime.cpp namespace.cpp struct.cpp structmember.cpp method.cpp type.cpp types/i32.cpp variable.cpp node/addnode.cpp node/minusnode.cpp node/returnnode.cpp node/lessthan.cpp node/variablenode.cpp node/ifnode.cpp node/blocknode.cpp node/functioncall.cpp node/assignmentnode.cpp context.cpp)
+target_include_directories(Runtime PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
